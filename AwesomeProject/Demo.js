@@ -4,7 +4,10 @@ import { Text, View } from "react-native";
 const Demo = () => {
     return (
         <View >
-            <Text style={{textAlign:'center'}}>
+            <Text style={{textAlign:'center' , fontSize:28}}>
+              I am Ameen Ansari
+            </Text>
+            <Text style={{textAlign:'center' , fontSize:17}}>
                 Welcome To My Demo Component
             </Text>
             <Text style={{textAlign:'center'}}>
