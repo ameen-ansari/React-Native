@@ -6,8 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const About = ({navigation}) => {
     return (
         <View >
-            <Text style={{textAlign:'center' , fontSize:32 , fontWeight:'bold'}}>
-              Welcome To About Page
+            <Text style={{color:'red',textAlign:'center' , fontSize:32 , fontWeight:'bold'}}>
+              About Page
             </Text>
             <Text style={{textAlign:'center' , fontSize:28 , fontWeight:'bold'}}>
               I am Ameen Ansari
@@ -19,8 +19,11 @@ const About = ({navigation}) => {
                 Finally Done
             </Text>
             <Button
-                title="Others"
+                title="GO TO Others"
                 onPress={()=>navigation.navigate('Others')}
+                // onPress={()=>navigation.goBack()}
+                // onPress={()=>navigation.popToTop()}
+                // onPress={alert('Hello From Developer Amee')}
             />
         </View>
     )
