@@ -18,9 +18,9 @@
 // In App.js in a new project
 
 import React from 'react';
-import { View, Text } from 'react-native';
+// import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Demo from './Components/Demo'
 import Others from './Components/Others';
 import About from './Components/About';
@@ -39,18 +39,34 @@ import About from './Components/About';
 // }
 
 
-function App() {
-  const Stack = createNativeStackNavigator();
+// function App() {
+//   const Stack = createNativeStackNavigator();
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator>
+//         <Stack.Screen name="Home" component={Demo} />
+//         <Stack.Screen name="About" component={About} />
+//         <Stack.Screen name="Others" component={Others} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// export default App;
+
+//////--------------->
+//Tab Navigation Done
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Demo} />
-        <Stack.Screen name="About" component={About} />
-        <Stack.Screen name="Others" component={Others} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Demo}   />
+        <Tab.Screen name="About" component={About} />
+        <Tab.Screen name="Others" component={Others} />
+      </Tab.Navigator>                                
     </NavigationContainer>
   );
 }
-
-export default App;
-
